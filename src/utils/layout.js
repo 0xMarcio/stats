@@ -1,4 +1,5 @@
 'use strict'
+import { Analytics } from '@vercel/analytics/react';
 
 module.exports = (body, favicon, styles, scripts, variables) => `
 	<!doctype html>
@@ -29,6 +30,7 @@ module.exports = (body, favicon, styles, scripts, variables) => `
 		<body>
 
 			${ body }
+			${         <Analytics />		}
 
 		</body>
 	</html>
